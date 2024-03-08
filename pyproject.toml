@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "smarthome"
+version = "0.1.0"
+description = ""
+authors = ["mkessler"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+poetry-dotenv = "^0.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
