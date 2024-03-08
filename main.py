@@ -131,15 +131,8 @@ if __name__=='__main__':
     while True:
         router.check_up_status()
         if router.up:
-            if time.localtime().tm_hour == 20 and time.localtime().tm_min == 0 and time.localtime().tm_sec  in range(0, 5):
-                living_room_light.turn_dark()
-                living_room_light.turn_red()
-                corridor_light.turn_off()
-                uli_room_light.turn_off()
-                micha_room_light.turn_off()
             uli_status = uli_device.check_up_status()
             micha_status = micha_device.check_up_status()
-            print(f'Uli: {uli_status}, Micha: {micha_status}')
             if uli_status == 2 or micha_status == 2 and later_than_6PM():
                 if not corridor_light.is_on():
                     corridor_light.turn_on()
